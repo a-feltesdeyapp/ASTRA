@@ -2,6 +2,9 @@
 # _t denotes a target value
 # theta1 and theta2 represent current motor position
 # omega1 and omega2 represent current motor speed
+import numpy as np
+import time as t
+import keyboard as k
 class pidController:
     def __init__(self,Kp,Ki,Kd,setpoint):
         self.Kp=Kp
@@ -25,9 +28,9 @@ class pidController:
         Control= Pcontrol+Dcontrol+Icontrol
 
 # main code body
-Kp=0
-Ki=0
-Kd=0
+Kp=1
+Ki=1
+Kd=1
 theta1=0
 theta2=0
 theta1_t=0
@@ -37,10 +40,22 @@ pid2 = pidController(theta1,Kp,Ki,Kd,theta1_t)
 
 active=True
 dt = 0.001
-while(active):
+end = 1000
+n = end/dt
+last_time = t.monotonic()
+
+while True:
+    # need this from magnetic encoders
     theta1=0
     theta2=0
+    # need this from other functions
     theta1_t=0
     theta2_t=0
+    current_time = t.monotonic()
+    dt = current_time-last_time
     control1=pid1.update(theta1_t,dt)
     control2=pid2.update(theta2_t,dt)
+    last_time=current_time
+    if k.is_pressed('q'):
+        print("Control terminated by user.")
+        break
