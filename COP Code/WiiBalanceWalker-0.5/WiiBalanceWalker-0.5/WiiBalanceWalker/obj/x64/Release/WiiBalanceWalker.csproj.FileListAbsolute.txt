@@ -1,0 +1,12 @@
+C:\Users\nahkr\Desktop\WiiBalanceWalker-0.5\WiiBalanceWalker-0.5\WiiBalanceWalker\bin\x64\Release\WiiBalanceWalker.exe.config
+C:\Users\nahkr\Desktop\WiiBalanceWalker-0.5\WiiBalanceWalker-0.5\WiiBalanceWalker\bin\x64\Release\WiiBalanceWalker.exe
+C:\Users\nahkr\Desktop\WiiBalanceWalker-0.5\WiiBalanceWalker-0.5\WiiBalanceWalker\bin\x64\Release\InTheHand.Net.Personal.dll
+C:\Users\nahkr\Desktop\WiiBalanceWalker-0.5\WiiBalanceWalker-0.5\WiiBalanceWalker\bin\x64\Release\WiimoteLib.dll
+C:\Users\nahkr\Desktop\WiiBalanceWalker-0.5\WiiBalanceWalker-0.5\WiiBalanceWalker\obj\x64\Release\WiiBalanceWalker.csproj.AssemblyReference.cache
+C:\Users\nahkr\Desktop\WiiBalanceWalker-0.5\WiiBalanceWalker-0.5\WiiBalanceWalker\obj\x64\Release\WiiBalanceWalker.FormBluetooth.resources
+C:\Users\nahkr\Desktop\WiiBalanceWalker-0.5\WiiBalanceWalker-0.5\WiiBalanceWalker\obj\x64\Release\WiiBalanceWalker.FormMain.resources
+C:\Users\nahkr\Desktop\WiiBalanceWalker-0.5\WiiBalanceWalker-0.5\WiiBalanceWalker\obj\x64\Release\WiiBalanceWalker.Properties.Resources.resources
+C:\Users\nahkr\Desktop\WiiBalanceWalker-0.5\WiiBalanceWalker-0.5\WiiBalanceWalker\obj\x64\Release\WiiBalanceWalker.csproj.GenerateResource.cache
+C:\Users\nahkr\Desktop\WiiBalanceWalker-0.5\WiiBalanceWalker-0.5\WiiBalanceWalker\obj\x64\Release\WiiBalanceWalker.csproj.CoreCompileInputs.cache
+C:\Users\nahkr\Desktop\WiiBalanceWalker-0.5\WiiBalanceWalker-0.5\WiiBalanceWalker\obj\x64\Release\WiiBalan.708F6493.Up2Date
+C:\Users\nahkr\Desktop\WiiBalanceWalker-0.5\WiiBalanceWalker-0.5\WiiBalanceWalker\obj\x64\Release\WiiBalanceWalker.exe
