@@ -6,6 +6,8 @@ import math
 import KinematicsModel
 import serial
 import struct
+import csv
+import time
 
 # set working path to path to script path
 abspath = os.path.abspath(__file__)
@@ -24,8 +26,8 @@ process = subprocess.Popen(['./WiiBalanceWalker-0.5/WiiBalanceWalker-0.5/WiiBala
                              text=True)
 
 # setup serial communication (chan)
-ser1 = serial.Serial('COMX',115200)
-ser2 = serial.Serial('COMX',115200)
+#ser1 = serial.Serial('COM4',115200)
+#ser2 = serial.Serial('COMX',115200)
 
 def  convertPitchRoll(x,y):
     # converts WBW balance ratio value into pitch/roll
@@ -36,6 +38,10 @@ def  convertPitchRoll(x,y):
     roll = x/100 * 10
     pitch = y/100 * 10
     return [pitch, roll]
+
+target_angles = [math.nan, math.nan]
+
+# set up data export
 
 while True:
     output = process.stdout.readline()
@@ -56,12 +62,18 @@ while True:
     roll = int(pitchRoll[1])
 
     target_angles = km.calculate(KinematicsModel.deg2rad(pitch),KinematicsModel.deg2rad(roll)) # get target angles from pitch/roll
-    # convert to degrees
-    target_angles[0] = target_angles[0] * 180/math.pi
-    target_angles[1] = target_angles[1] * 180/math.pi
+    # convert angles into form useful for arduino code
+    # theta2_t is already good to go
+    target_angles[0]=180-target_angles[0]
+    if target_angles[0]<0:
+        target_angles[0]=360-target_angles[0]
     theta1_t = struct.pack('f',target_angles[0])
     theta2_t = struct.pack('f',target_angles[1])
-    ser1.write(theta1_t)
-    ser2.write(theta2_t)
+    
+    if(not math.isnan(target_angles[0]) and not math.isnan(target_angles[1])):
+    
+        #ser1.write(theta1_t)
+        #ser2.write(theta2_t)
+        "placeholder"
     print(target_angles)
 
